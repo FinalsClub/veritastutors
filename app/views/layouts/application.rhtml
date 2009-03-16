@@ -1,0 +1,17 @@
+<html>
+
+<head>
+<title>Veritas Tutoring</title>
+</head>
+
+<% if logged_in? %>
+  <%= render "layouts/top_bar_logged_in" %>
+<% else %>
+  <%= render "layouts/top_bar_logged_out" %>
+<% end %>
+  
+<body>
+<%= @content_for_layout %>
+</body>
+
+</html>
