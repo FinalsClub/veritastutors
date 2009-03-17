@@ -5,9 +5,9 @@
 </head>
 
 <% if logged_in? %>
-  <%= render "layouts/top_bar_logged_in" %>
+  <%= render :partial => "sessions/top_bar_logged_in" %>
 <% else %>
-  <%= render "layouts/top_bar_logged_out" %>
+  <%= render :partial => "sessions/top_bar_logged_out" %>
 <% end %>
   
 <body>
