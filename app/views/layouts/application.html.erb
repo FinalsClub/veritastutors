@@ -4,14 +4,20 @@
 <title>Veritas Tutoring</title>
 </head>
 
-<% if logged_in? %>
-  <%= render :partial => "sessions/top_bar_logged_in" %>
-<% else %>
-  <%= render :partial => "sessions/top_bar_logged_out" %>
-<% end %>
-  
 <body>
+<div id="top_bar">
+<% if logged_in? %>
+  <%= render :partial => "misc/top_bar_logged_in" %>
+<% else %>
+  <%= render :partial => "misc/top_bar_logged_out" %>
+<% end %>
+</div>
+
+
+<div id="main_body">
 <%= yield %>
+</div>
+
 </body>
 
 </html>

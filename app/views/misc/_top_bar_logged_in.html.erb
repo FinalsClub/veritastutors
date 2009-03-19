@@ -1,0 +1,8 @@
+
+Welcome <%= current_user.login %>!
+
+<%= link_to image_tag("logo.img.jpg"), 
+    :controller => :misc, 
+    :action => :homepage %>
+
+<%= link_to "Logout", :controller => :sessions, :action => 'destroy' %>
