@@ -4459,3 +4459,98 @@ Rendering misc/homepage
 Rendered sessions/_embedded_login (0.9ms)
 Rendered misc/_top_bar_logged_out (2.9ms)
 Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-03-19 12:26:18) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (0.8ms)
+Rendered misc/_top_bar_logged_out (2.8ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-03-19 12:26:20) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (0.9ms)
+Rendered misc/_top_bar_logged_out (3.1ms)
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-03-19 12:26:21) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (0.8ms)
+Rendered misc/_top_bar_logged_out (2.6ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-03-19 12:27:09) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (0.8ms)
+Rendered misc/_top_bar_logged_out (2.8ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-03-19 12:27:10) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (0.8ms)
+Rendered misc/_top_bar_logged_out (2.8ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-03-19 12:27:26) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (0.8ms)
+Rendered misc/_top_bar_logged_out (2.7ms)
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-03-19 12:30:11) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"73f84c968c68a73639bbdcf2de18183a387bd8f6", "login"=>"nick", "password"=>"redrum"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'nick') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to /
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-03-19 12:30:11) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered misc/_top_bar_logged_in (4.6ms)
+Completed in 23ms (View: 21, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-03-19 12:30:13) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered misc/_top_bar_logged_in (2.3ms)
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-03-19 12:30:14) [GET]
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-03-19 12:30:14) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (0.8ms)
+Rendered misc/_top_bar_logged_out (2.7ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-03-19 12:30:15) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (0.9ms)
+Rendered misc/_top_bar_logged_out (2.8ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
