@@ -7,8 +7,8 @@ class CreateStudents < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :user_id
-    add_index :client_id
+    add_index :students, :user_id
+    add_index :students, :client_id
   end
 
   def self.down
