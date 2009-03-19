@@ -25,4 +25,30 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
+
+
+  def new_with_client_or_student
+    @user = User.new
+    @client = Client.new
+    @student = Student.new
+  end
+
+  def create_with_client_or_student
+
+    logout_keeping_session!
+    @user = User.new(params[:user])
+    success = @user && @user.save
+    if (! success) || (! @user.errors.empty?)
+      flash[:error] = "We were unable to set up that account"
+      render :action => 'new_with_client_or_student'
+      return
+    end
+
+    @client = Client.new(params[:user])
+    @client.user_id = @user.id
+    success = @client && client.save
+    
+    self.current_user = @user # logged in
+    redirect_back_or_default('/')
+  end
 end
