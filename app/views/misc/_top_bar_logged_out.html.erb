@@ -1,13 +1,8 @@
 
 
-<%= link_to image_tag("logo.img.jpg"), 
-    :controller => 'user', 
-    :action => 'new' %>
+<%= link_to image_tag("logo.img.jpg"), :signup %>
 
-
-<%= link_to 'Signup', 
-    :controller => 'user', 
-    :action => 'new' %>
+<%= link_to 'Signup', :signup %>
 
 <%= render :partial => 'sessions/embedded_login' %>
 
