@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tutor_id: 1
+  student_id: 1
+  start: 2009-03-27 15:52:26
+  end: 2009-03-27 15:52:26
+  status: MyString
+
+two:
+  tutor_id: 1
+  student_id: 1
+  start: 2009-03-27 15:52:26
+  end: 2009-03-27 15:52:26
+  status: MyString

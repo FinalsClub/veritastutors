@@ -1,0 +1,28 @@
+<p>
+  <b>Tutor:</b>
+  <%=h @appointment_request.tutor_id %>
+</p>
+
+<p>
+  <b>Student:</b>
+  <%=h @appointment_request.student_id %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%=h @appointment_request.start %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%=h @appointment_request.end %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @appointment_request.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_appointment_request_path(@appointment_request) %> |
+<%= link_to 'Back', appointment_requests_path %>

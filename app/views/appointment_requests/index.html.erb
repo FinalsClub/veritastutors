@@ -1,0 +1,28 @@
+<h1>Listing appointment_requests</h1>
+
+<table>
+  <tr>
+    <th>Tutor</th>
+    <th>Student</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Status</th>
+  </tr>
+
+<% for appointment_request in @appointment_requests %>
+  <tr>
+    <td><%=h appointment_request.tutor_id %></td>
+    <td><%=h appointment_request.student_id %></td>
+    <td><%=h appointment_request.start %></td>
+    <td><%=h appointment_request.end %></td>
+    <td><%=h appointment_request.status %></td>
+    <td><%= link_to 'Show', appointment_request %></td>
+    <td><%= link_to 'Edit', edit_appointment_request_path(appointment_request) %></td>
+    <td><%= link_to 'Destroy', appointment_request, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New appointment_request', new_appointment_request_path %>
