@@ -1,0 +1,16 @@
+<h1>Editing tutor</h1>
+
+<% form_for(@tutor) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @tutor %> |
+<%= link_to 'Back', tutors_path %>

@@ -1,0 +1,20 @@
+<h1>Listing tutors</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+  </tr>
+
+<% for tutor in @tutors %>
+  <tr>
+    <td><%=h tutor.user_id %></td>
+    <td><%= link_to 'Show', tutor %></td>
+    <td><%= link_to 'Edit', edit_tutor_path(tutor) %></td>
+    <td><%= link_to 'Destroy', tutor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tutor', new_tutor_path %>
