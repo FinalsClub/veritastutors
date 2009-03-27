@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :appointment_requests
+
+  map.resources :clients
+
+  map.resources :students
+
   map.resources :tutors
 
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
