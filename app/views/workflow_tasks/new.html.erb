@@ -1,0 +1,23 @@
+<h1>New workflow_task</h1>
+
+<% form_for(@workflow_task) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :owner_id %><br />
+    <%= f.text_field :owner_id %>
+  </p>
+  <p>
+    <%= f.label :workflow_task_type_id %><br />
+    <%= f.text_field :workflow_task_type_id %>
+  </p>
+  <p>
+    <%= f.label :target_id %><br />
+    <%= f.text_field :target_id %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', workflow_tasks_path %>

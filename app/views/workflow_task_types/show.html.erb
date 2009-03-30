@@ -1,0 +1,13 @@
+<p>
+  <b>Owner role:</b>
+  <%=h @workflow_task_type.owner_role_id %>
+</p>
+
+<p>
+  <b>Partial:</b>
+  <%=h @workflow_task_type.partial %>
+</p>
+
+
+<%= link_to 'Edit', edit_workflow_task_type_path(@workflow_task_type) %> |
+<%= link_to 'Back', workflow_task_types_path %>

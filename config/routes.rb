@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :workflow_tasks
+
+  map.resources :workflow_task_types
+
   map.resources :appointment_requests
 
   map.resources :clients

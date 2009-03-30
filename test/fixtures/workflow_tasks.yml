@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  owner_id: 1
+  workflow_task_type_id: 1
+  target_id: 1
+
+two:
+  owner_id: 1
+  workflow_task_type_id: 1
+  target_id: 1

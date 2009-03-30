@@ -1,0 +1,24 @@
+<h1>Listing workflow_tasks</h1>
+
+<table>
+  <tr>
+    <th>Owner</th>
+    <th>Workflow task type</th>
+    <th>Target</th>
+  </tr>
+
+<% for workflow_task in @workflow_tasks %>
+  <tr>
+    <td><%=h workflow_task.owner_id %></td>
+    <td><%=h workflow_task.workflow_task_type_id %></td>
+    <td><%=h workflow_task.target_id %></td>
+    <td><%= link_to 'Show', workflow_task %></td>
+    <td><%= link_to 'Edit', edit_workflow_task_path(workflow_task) %></td>
+    <td><%= link_to 'Destroy', workflow_task, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New workflow_task', new_workflow_task_path %>

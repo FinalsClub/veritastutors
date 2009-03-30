@@ -1,0 +1,19 @@
+<h1>New workflow_task_type</h1>
+
+<% form_for(@workflow_task_type) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :owner_role_id %><br />
+    <%= f.text_field :owner_role_id %>
+  </p>
+  <p>
+    <%= f.label :partial %><br />
+    <%= f.text_field :partial %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', workflow_task_types_path %>

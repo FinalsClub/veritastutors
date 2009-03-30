@@ -1,0 +1,18 @@
+<p>
+  <b>Owner:</b>
+  <%=h @workflow_task.owner_id %>
+</p>
+
+<p>
+  <b>Workflow task type:</b>
+  <%=h @workflow_task.workflow_task_type_id %>
+</p>
+
+<p>
+  <b>Target:</b>
+  <%=h @workflow_task.target_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_workflow_task_path(@workflow_task) %> |
+<%= link_to 'Back', workflow_tasks_path %>
