@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090325193619) do
+ActiveRecord::Schema.define(:version => 20090327195226) do
+
+  create_table "appointment_requests", :force => true do |t|
+    t.integer  "tutor_id"
+    t.integer  "student_id"
+    t.datetime "start"
+    t.datetime "end"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "clients", :force => true do |t|
     t.string   "name"

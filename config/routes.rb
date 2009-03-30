@@ -11,6 +11,8 @@ ActionController::Routing::Routes.draw do |map|
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new_with_client_or_student'
+  map.tutorhome '/tutor', :controller => 'tutors', :action => 'home'
+
 
   map.resources :users
   map.resource :session

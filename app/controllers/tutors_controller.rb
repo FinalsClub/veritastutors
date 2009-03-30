@@ -1,4 +1,15 @@
 class TutorsController < ApplicationController
+
+#  require_role "admin", :for_all_except => :home
+  require_role "tutor", :for => :home
+
+  
+  def home
+
+    @tutor = Tutor.find_by_user_id(current_user.id) 
+    @requests = @tutor.appointment_requests
+  end
+
   # GET /tutors
   # GET /tutors.xml
   def index
@@ -43,6 +54,8 @@ class TutorsController < ApplicationController
   def create
 
     @user = User.new(params[:user])
+    tutorRole = Role.find_by_name('tutor')
+    @user.roles = [ tutorRole ]
     @user.save
     success = @user.save && @user.errors.empty?
     errors = @user.errors

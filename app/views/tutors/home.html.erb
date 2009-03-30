@@ -1,0 +1,16 @@
+
+Hey there tutor.
+
+Requested appointments:
+
+<% @requests.each do |req| %>
+  <p> 
+    status: <%= req.status %> 
+    requested by: <%= req.student.user.login %>
+    <% if req.requested %>
+      <a href="foo">accept</a>
+      <a href="bar">reject</a>
+    <% end %>
+  </p>
+  
+<% end %>

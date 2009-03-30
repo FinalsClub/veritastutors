@@ -1,4 +1,6 @@
 class AppointmentRequestsController < ApplicationController
+
+
   # GET /appointment_requests
   # GET /appointment_requests.xml
   def index
