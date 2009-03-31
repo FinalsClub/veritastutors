@@ -1,13 +1,5 @@
-class AddInitialTaskTypes < ActiveRecord::Migration
+class InitialTaskTypes < ActiveRecord::Migration
   def self.up
-
-    # decided to push role decisions into the task-specific logic
-    # and remove role requirements
-    remove_column :workflow_task_types, :owner_role_id
-
-    # names will be useful for tracking
-    add_column :workflow_task_types, :name, :string
-
 
     wtt = WorkflowTaskType.new
     wtt.id = WorkflowTaskType::PhoneConsultationId
@@ -20,10 +12,11 @@ class AddInitialTaskTypes < ActiveRecord::Migration
     wtt.partial = 'simple_workflow_tasks/on_site_interview'
     wtt.name = 'Initial Onsite Interview'
     wtt.save
-   
+
   end
 
   def self.down
+
     if(WorkflowTaskType::PhoneConsultation)
       WorkflowTaskType::PhoneConsultation.delete
     end
@@ -32,8 +25,5 @@ class AddInitialTaskTypes < ActiveRecord::Migration
       WorkflowTaskType::OnSiteInterview.delete
     end
 
-    remove_column :workflow_task_types, :name
-    add_column :workflow_task_types, :owner_role_id, :integer
   end
-
 end
