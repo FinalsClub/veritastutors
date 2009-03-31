@@ -3,20 +3,22 @@ class AddInitialTaskTypes < ActiveRecord::Migration
 
     # decided to push role decisions into the task-specific logic
     # and remove role requirements
-    remove_column :workflow_task_types, :owner_role
+    remove_column :workflow_task_types, :owner_role_id
 
     # names will be useful for tracking
     add_column :workflow_task_types, :name, :string
 
 
     wtt = WorkflowTaskType.new
-    wtt.id = WorkflowTaskType::PhoneConsultation
+    wtt.id = WorkflowTaskType::PhoneConsultationId
     wtt.partial = 'simple_workflow_task_controller/phone_consultation'
+    wtt.name = 'Initial Phone Consultation'
     wtt.save
    
     wtt = WorkflowTaskType.new
-    wtt.id = WorkflowTaskType::OnSiteInterview
+    wtt.id = WorkflowTaskType::OnSiteInterviewId
     wtt.partial = 'simple_workflow_task_controller/on_site_interview'
+    wtt.name = 'Initial Onsite Interview'
     wtt.save
    
   end
