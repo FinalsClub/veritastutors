@@ -8,6 +8,7 @@ class SimpleWorkflowTasksController < ApplicationController
     @newTask.save
 
     @task.delete
+    redirect_back_or_default('/')
   end
 
 
@@ -15,6 +16,7 @@ class SimpleWorkflowTasksController < ApplicationController
     @task = WorkflowTask.find(params[:id])
     
     @task.delete    
+    redirect_back_or_default('/')
   end
 
 

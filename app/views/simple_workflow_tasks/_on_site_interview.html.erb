@@ -1,0 +1,8 @@
+<div class='phone_consultation_partial'>
+
+  <% u = User.find_by_id(task.target_id) %>
+  Conduct onsite interview with  <%= u.login %>.
+
+  <%= link_to 'Finished', :controller => 'simple_workflow_tasks', :action => 'complete_on_site_interview', :id => task.id %> 
+
+</div>

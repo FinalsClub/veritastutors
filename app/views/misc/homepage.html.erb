@@ -3,13 +3,13 @@
 
 Das Homepage.
 
-<% if logged_in %>
+<% if logged_in? %>
 
 <h1>Outstanding tasks for user <%= current_user.login %></h1>
 
 <% for task in @pending_tasks %>
 <div class='workflow_task'>
-<%= render :partial task.workflow_task_type.partial, locals => { :task => task } %>
+<%= render :partial => task.workflow_task_type.partial, :locals => { :task => task } %>
 </div>
 <% end # for task in @pending_tasks do %>
 

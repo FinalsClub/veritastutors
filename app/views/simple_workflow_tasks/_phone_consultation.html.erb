@@ -1,8 +1,8 @@
 <div class='phone_consultation_partial'>
 
-  <% client = Client.find_by_id(task.target_id) %>
-  Call <%= client.login %> for an initial consultation.
+  <% u = User.find_by_id(task.target_id) %>
+  Call <%= u.login %> for an initial consultation.
 
-  <%= link_to_remote 'Finished', :url => { :controller => 'simple_workflow_tasks', :action => 'complete_phone_consultation', :id => task.id } %> 
+  <%= link_to 'Finished', :controller => 'simple_workflow_tasks', :action => 'complete_phone_consultation', :id => task.id %> 
 
 </div>

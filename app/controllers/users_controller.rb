@@ -60,8 +60,16 @@ class UsersController < ApplicationController
       @student.user_id = @user.id
       @student.client_id = @client.id
 
-      @success = @student && @student.save
+      success = @student && @student.save
     end
+
+
+    task = WorkflowTask.new
+    task.workflow_task_type_id = WorkflowTaskType::PhoneConsultationId
+    task.owner = User.find_by_login('admin')
+    task.target_id = @user.id
+    task.save()
+
 
     if (! success) || (@client.is_student && ! @student.errors.empty?)
       @client.delete
@@ -73,7 +81,7 @@ class UsersController < ApplicationController
     
     self.current_user = @user # logged in
 
-    
+
     redirect_back_or_default('/')
   end
 end

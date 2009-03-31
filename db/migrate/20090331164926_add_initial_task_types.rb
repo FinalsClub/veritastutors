@@ -11,13 +11,13 @@ class AddInitialTaskTypes < ActiveRecord::Migration
 
     wtt = WorkflowTaskType.new
     wtt.id = WorkflowTaskType::PhoneConsultationId
-    wtt.partial = 'simple_workflow_task_controller/phone_consultation'
+    wtt.partial = 'simple_workflow_tasks/phone_consultation'
     wtt.name = 'Initial Phone Consultation'
     wtt.save
    
     wtt = WorkflowTaskType.new
     wtt.id = WorkflowTaskType::OnSiteInterviewId
-    wtt.partial = 'simple_workflow_task_controller/on_site_interview'
+    wtt.partial = 'simple_workflow_tasks/on_site_interview'
     wtt.name = 'Initial Onsite Interview'
     wtt.save
    

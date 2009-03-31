@@ -74,7 +74,6 @@ ActiveRecord::Schema.define(:version => 20090331164926) do
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
 
   create_table "workflow_task_types", :force => true do |t|
-    t.integer  "owner_role_id"
     t.string   "partial"
     t.datetime "created_at"
     t.datetime "updated_at"
