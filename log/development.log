@@ -11165,3 +11165,177 @@ Rendering template within layouts/workflow_tasks
 Rendering workflow_tasks/index
   [4;36;1mWorkflowTask Load (0.2ms)[0m   [0;1mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks".owner_id = 20) [0m
 Completed in 21ms (View: 5, DB: 1) | 200 OK [http://localhost/workflow_tasks]
+
+
+Processing WorkflowTasksController#index (for 127.0.0.1 at 2009-03-30 20:50:53) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/workflow_tasks
+Rendering workflow_tasks/index
+  [4;36;1mWorkflowTask Load (0.2ms)[0m   [0;1mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks".owner_id = 20) [0m
+Completed in 21ms (View: 5, DB: 1) | 200 OK [http://localhost/workflow_tasks]
+  [4;35;1mUser Load (3.1ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mUser Load (2.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (2.6ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'tutor') LIMIT 1[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to ConvertRoleIds (20090331000300)
+Migrating to AddAdminUser (20090331153904)
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to ConvertRoleIds (20090331000300)
+Migrating to AddAdminUser (20090331153904)
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to ConvertRoleIds (20090331000300)
+Migrating to AddAdminUser (20090331153904)
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to ConvertRoleIds (20090331000300)
+Migrating to AddAdminUser (20090331153904)
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin_foo@bar.org') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('', '8a5601d6ab3babbbd7dd3f060482fb4708f0d4dd', '2009-03-31 15:46:32', '0b3b5923b073d14b8b965f5424f31049148ad426', NULL, NULL, 'admin', 'admin_foo@bar.org', '2009-03-31 15:46:32')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "roles_users" ("role_id", "user_id") VALUES (1, 21)[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090331153904')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("appointment_requests")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_clients_on_user_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("roles")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("roles_users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_roles_users_on_user_id')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_roles_users_on_role_id')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("students")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_students_on_client_id')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_students_on_user_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("tutors")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("workflow_task_types")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("workflow_tasks")[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to ConvertRoleIds (20090331000300)
+Migrating to AddAdminUser (20090331153904)
+Migrating to AddDummyUsers (20090331155330)
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'tutor1') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'tutor_one@bar.org') LIMIT 1[0m
+  [4;36;1mUser Create (0.7ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('', 'aba97ee7ec361b0ecf156d3a6c28cf102ba9e5eb', '2009-03-31 15:59:17', '22b05df08b69e8d46195989dfa76d9f79a952ae6', NULL, NULL, 'tutor1', 'tutor_one@bar.org', '2009-03-31 15:59:17')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "roles_users" ("role_id", "user_id") VALUES (4, 22)[0m
+  [4;36;1mTutor Create (0.6ms)[0m   [0;1mINSERT INTO "tutors" ("updated_at", "user_id", "created_at") VALUES('2009-03-31 15:59:17', 22, '2009-03-31 15:59:17')[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'tutor2') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'tutor_two@bar.org') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('', 'b7faf6be47a88408f90a5f8733a4aa638cbc5a16', '2009-03-31 15:59:17', '1360c4faa2f41eee8579f747e82698f639af3e4b', NULL, NULL, 'tutor2', 'tutor_two@bar.org', '2009-03-31 15:59:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "roles_users" ("role_id", "user_id") VALUES (4, 23)[0m
+  [4;35;1mTutor Create (0.6ms)[0m   [0mINSERT INTO "tutors" ("updated_at", "user_id", "created_at") VALUES('2009-03-31 15:59:17', 23, '2009-03-31 15:59:17')[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090331155330')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("appointment_requests")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_clients_on_user_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("roles")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("roles_users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_roles_users_on_user_id')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_roles_users_on_role_id')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("students")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_students_on_client_id')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_students_on_user_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("tutors")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("workflow_task_types")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("workflow_tasks")[0m
