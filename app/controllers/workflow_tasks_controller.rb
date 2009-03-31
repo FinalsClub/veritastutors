@@ -2,7 +2,7 @@ class WorkflowTasksController < ApplicationController
   # GET /workflow_tasks
   # GET /workflow_tasks.xml
   def index
-    @workflow_tasks = WorkflowTask.find(:all)
+    @workflow_tasks = current_user.workflow_tasks
 
     respond_to do |format|
       format.html # index.html.erb

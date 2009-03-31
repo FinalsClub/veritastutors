@@ -1,0 +1,2 @@
+module SimpleWorkflowTasksHelper
+end

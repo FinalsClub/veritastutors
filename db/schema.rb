@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090327195226) do
+ActiveRecord::Schema.define(:version => 20090331000300) do
 
   create_table "appointment_requests", :force => true do |t|
     t.integer  "tutor_id"
@@ -72,5 +72,20 @@ ActiveRecord::Schema.define(:version => 20090327195226) do
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
+
+  create_table "workflow_task_types", :force => true do |t|
+    t.integer  "owner_role_id"
+    t.string   "partial"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "workflow_tasks", :force => true do |t|
+    t.integer  "owner_id"
+    t.integer  "workflow_task_type_id"
+    t.integer  "target_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
