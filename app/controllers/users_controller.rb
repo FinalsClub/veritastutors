@@ -72,6 +72,8 @@ class UsersController < ApplicationController
     end
     
     self.current_user = @user # logged in
+
+    
     redirect_back_or_default('/')
   end
 end

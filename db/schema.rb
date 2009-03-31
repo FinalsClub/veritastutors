@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090331155330) do
+ActiveRecord::Schema.define(:version => 20090331164926) do
 
   create_table "appointment_requests", :force => true do |t|
     t.integer  "tutor_id"
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20090331155330) do
     t.string   "partial"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "workflow_tasks", :force => true do |t|

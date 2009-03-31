@@ -14,10 +14,6 @@ class SimpleWorkflowTasksController < ApplicationController
   def complete_on_site_interview
     @task = WorkflowTask.find(params[:id])
     
-    @newTask = @task.create_successor_task
-    @newTask.workflow_task_type_id = WorkflowTaskType::InterviewFollowupId
-    @newTask.save
-
     @task.delete    
   end
 

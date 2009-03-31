@@ -11339,3 +11339,101 @@ Migrating to AddDummyUsers (20090331155330)
   [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("workflow_task_types")[0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("workflow_tasks")[0m
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-03-31 12:04:44) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+Rendered misc/_top_bar_logged_in (2.7ms)
+Completed in 51ms (View: 49, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-03-31 12:04:46) [GET]
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 112ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-03-31 12:04:47) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (1.0ms)
+Rendered misc/_top_bar_logged_out (2.8ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to ConvertRoleIds (20090331000300)
+Migrating to AddAdminUser (20090331153904)
+Migrating to AddDummyUsers (20090331155330)
+Migrating to AddInitialTaskTypes (20090331164926)
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to ConvertRoleIds (20090331000300)
+Migrating to AddAdminUser (20090331153904)
+Migrating to AddDummyUsers (20090331155330)
+Migrating to AddInitialTaskTypes (20090331164926)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCREATE TEMPORARY TABLE "altered_workflow_task_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "owner_role_id" integer, "partial" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("workflow_task_types")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "workflow_task_types"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "workflow_task_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "owner_role_id" integer, "partial" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_workflow_task_types")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_workflow_task_types"[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mALTER TABLE "workflow_task_types" ADD "name" varchar(255)[0m
+  [4;36;1mSQL (9.6ms)[0m   [0;1mVACUUM[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.2ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090331164926')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("appointment_requests")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_clients_on_user_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("roles")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("roles_users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_roles_users_on_user_id')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_roles_users_on_role_id')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("students")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_students_on_client_id')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_students_on_user_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("tutors")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("workflow_task_types")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("workflow_tasks")[0m
