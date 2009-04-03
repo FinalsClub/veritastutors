@@ -24,7 +24,9 @@ class ClientsController < ApplicationController
   # GET /clients/new
   # GET /clients/new.xml
   def new
+    @user = User.new
     @client = Client.new
+    @student = Student.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,18 +42,60 @@ class ClientsController < ApplicationController
   # POST /clients
   # POST /clients.xml
   def create
-    @client = Client.new(params[:client])
 
-    respond_to do |format|
-      if @client.save
-        flash[:notice] = 'Client was successfully created.'
-        format.html { redirect_to(@client) }
-        format.xml  { render :xml => @client, :status => :created, :location => @client }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @client.errors, :status => :unprocessable_entity }
-      end
+    logout_keeping_session!
+    @user = User.new(params[:user])
+    success = @user && @user.save
+    if (! success) || (! @user.errors.empty?)
+      flash[:error] = "We were unable to set up that account"
+      render :action => 'new'
+      return
     end
+
+    @client = Client.new(params[:client])
+    @client.user_id = @user.id
+    success = @client && @client.save
+
+    if (! success) || (! @client.errors.empty?)
+      @user.delete
+      flash[:error] = "We were unable to set up that account"
+      render :action => 'new'
+      return
+    end
+
+    @user.roles << Role::Client
+
+    if(@client.is_student)
+      @student = Student.new()
+      @student.user_id = @user.id
+      @student.client_id = @client.id
+
+      success = @student && @student.save
+      @user.roles << Role::Student
+    end
+
+
+
+    task = WorkflowTask.new
+    task.workflow_task_type_id = WorkflowTaskType::PhoneConsultationId
+    task.owner = User.find_by_login('admin')
+    task.target_id = @user.id
+    task.save()
+
+
+    if (! success) || (@client.is_student && ! @student.errors.empty?)
+      @client.delete
+      @user.delete
+      flash[:error] = "We were unable to set up that account"
+      render :action => 'new'
+      return
+    end
+    
+    self.current_user = @user # logged in
+
+
+    redirect_back_or_default('/')
+
   end
 
   # PUT /clients/1

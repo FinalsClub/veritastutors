@@ -14670,3 +14670,681 @@ Rendering template within layouts/application
 Rendering misc/homepage
 Rendered misc/_top_bar_logged_in (0.7ms)
 Completed in 31ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to ConvertRoleIds (20090331000300)
+Migrating to AddAdminUser (20090331153904)
+Migrating to AddDummyUsers (20090331155330)
+Migrating to AddInitialTaskTypes (20090331164926)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("appointment_requests")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("clients")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_clients_on_user_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("roles_users")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_roles_users_on_user_id')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_roles_users_on_role_id')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("students")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_students_on_client_id')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_students_on_user_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("tutors")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_users_on_login')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("workflow_task_types")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("workflow_tasks")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to ConvertRoleIds (20090331000300)
+Migrating to AddAdminUser (20090331153904)
+Migrating to AddDummyUsers (20090331155330)
+Migrating to UpdateWorkflowTaskTypes (20090331164926)
+Migrating to InitialTaskTypes (20090331183910)
+  [4;36;1mSQL (3.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090331183910')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("appointment_requests")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_clients_on_user_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("roles")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("roles_users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_roles_users_on_user_id')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_roles_users_on_role_id')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mPRAGMA index_list("students")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_students_on_client_id')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_students_on_user_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("tutors")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("workflow_task_types")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("workflow_tasks")[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-04-03 12:52:58) [GET]
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered sessions/_embedded_login (1.2ms)
+Rendered misc/_top_bar_logged_out (17.5ms)
+Completed in 226ms (View: 122, DB: 1) | 200 OK [http://localhost/register]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 13:00:35) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (1.1ms)
+Rendered misc/_top_bar_logged_out (3.3ms)
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2009-04-03 13:01:01) [GET]
+Rendering template within layouts/clients
+Rendering clients/new
+Completed in 205ms (View: 94, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2009-04-03 13:01:21) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"asdfqwer", "password"=>"asdfqwer", "login"=>"asdfoquwyr87", "email"=>"aojfhgqoeur@askdjfo.org"}, "commit"=>"Sign up", "authenticity_token"=>"7aa90264bb7b2423471358778bc30273c6fc1d46", "client"=>{"is_student"=>"false"}}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'asdfoquwyr87') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'aojfhgqoeur@askdjfo.org') LIMIT 1[0m
+  [4;36;1mUser Create (0.6ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('', 'ad8c71d2f937d3b23da5b7162dd0e3d19494aaf2', '2009-04-03 17:01:21', 'd334a046052d814f1a2aa1e029a853a8395ddbb2', NULL, NULL, 'asdfoquwyr87', 'aojfhgqoeur@askdjfo.org', '2009-04-03 17:01:21')[0m
+  [4;35;1mClient Create (22.3ms)[0m   [0mINSERT INTO "clients" ("name", "updated_at", "user_id", "is_student", "created_at") VALUES(NULL, '2009-04-03 17:01:21', 33, 'f', '2009-04-03 17:01:21')[0m
+  [4;36;1mWorkflowTaskType Load (0.5ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.4ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+  [4;35;1mWorkflowTask Create (0.6ms)[0m   [0mINSERT INTO "workflow_tasks" ("updated_at", "target_id", "workflow_task_type_id", "owner_id", "created_at") VALUES('2009-04-03 17:01:21', 33, 1, 21, '2009-04-03 17:01:21')[0m
+Redirected to /
+Completed in 108ms (DB: 25) | 302 Found [http://localhost/clients]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 13:01:21) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 33) LIMIT 1[0m
+  [4;35;1mWorkflowTask Load (0.2ms)[0m   [0mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 33) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered misc/_top_bar_logged_in (1.9ms)
+Completed in 46ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (6.0ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 ) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 7 ) [0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 8 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 9 ) [0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 10 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 11 ) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 12 ) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 13 ) [0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 14 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 15 ) [0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 16 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 17 ) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 18 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 19 ) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 20 ) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 22 ) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 23 ) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 24 ) [0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 25 ) [0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 26 ) [0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 27 ) [0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 28 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 29 ) [0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 30 ) [0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 31 ) [0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 32 ) [0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 33 ) [0m
+  [4;36;1mUser Load (5.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."user_id" = 1) LIMIT 1[0m
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."user_id" = 2) LIMIT 1[0m
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."user_id" = 3) LIMIT 1[0m
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 13:31:09) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 33) LIMIT 1[0m
+  [4;35;1mWorkflowTask Load (0.2ms)[0m   [0mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 33) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered misc/_top_bar_logged_in (0.7ms)
+Completed in 27ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-04-03 13:31:10) [GET]
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 115ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 13:31:10) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (1.0ms)
+Rendered misc/_top_bar_logged_out (2.7ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2009-04-03 13:31:13) [GET]
+Rendering template within layouts/clients
+Rendering clients/new
+Completed in 29ms (View: 9, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2009-04-03 13:31:25) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"asdfqwer", "password"=>"asdfqwer", "login"=>"kasjdfiywer", "email"=>"lakjgouiye@askdjf.org"}, "commit"=>"Sign up", "authenticity_token"=>"0ab65dece41d450c5fba608dd10e20dd15209b14", "client"=>{"is_student"=>"true"}}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'kasjdfiywer') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'lakjgouiye@askdjf.org') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('', '166d662b4cf5db2f35f8810df557c02d435fb87e', '2009-04-03 17:31:25', '5e63e457eb94656332d8cb04acfa8d9e712e7bc7', NULL, NULL, 'kasjdfiywer', 'lakjgouiye@askdjf.org', '2009-04-03 17:31:25')[0m
+  [4;35;1mClient Create (0.8ms)[0m   [0mINSERT INTO "clients" ("name", "updated_at", "user_id", "is_student", "created_at") VALUES(NULL, '2009-04-03 17:31:25', 34, 't', '2009-04-03 17:31:25')[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "roles_users" ("role_id", "user_id") VALUES (2, 34)[0m
+  [4;35;1mStudent Create (0.6ms)[0m   [0mINSERT INTO "students" ("updated_at", "client_id", "user_id", "created_at") VALUES('2009-04-03 17:31:25', 20, 34, '2009-04-03 17:31:25')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "roles_users" ("role_id", "user_id") VALUES (3, 34)[0m
+  [4;35;1mWorkflowTaskType Load (0.5ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+  [4;36;1mWorkflowTask Create (0.5ms)[0m   [0;1mINSERT INTO "workflow_tasks" ("updated_at", "target_id", "workflow_task_type_id", "owner_id", "created_at") VALUES('2009-04-03 17:31:26', 34, 1, 21, '2009-04-03 17:31:26')[0m
+Redirected to /
+Completed in 165ms (DB: 6) | 302 Found [http://localhost/clients]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 13:31:26) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 34) LIMIT 1[0m
+  [4;36;1mWorkflowTask Load (0.2ms)[0m   [0;1mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 34) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered misc/_top_bar_logged_in (0.6ms)
+Completed in 28ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 34) LIMIT 1[0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 34 ) [0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-04-03 13:38:53) [GET]
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 13:38:53) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (0.8ms)
+Rendered misc/_top_bar_logged_out (2.7ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-04-03 13:38:58) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"15179a971480e1daaf3d415b091a78eb34fa445a", "login"=>"admin", "password"=>"asdfqwer"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Fri Apr 03 17:38:58 UTC 2009
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered sessions/_embedded_login (0.9ms)
+Rendered misc/_top_bar_logged_out (3.1ms)
+Completed in 40ms (View: 25, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-04-03 13:39:04) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"15179a971480e1daaf3d415b091a78eb34fa445a", "login"=>"admin", "password"=>"donkeybutter"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to /
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 13:39:04) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;36;1mWorkflowTask Load (0.5ms)[0m   [0;1mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 21) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+  [4;35;1mWorkflowTaskType Load (0.4ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 33) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (4.4ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 34) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (1.7ms)
+Rendered misc/_top_bar_logged_in (0.8ms)
+Completed in 68ms (View: 49, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2009-04-03 13:39:19) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 19ms (View: 0, DB: 2) | 401 Unauthorized [http://localhost/students]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-03 13:39:24) [GET]
+
+
+ActionController::RoutingError (No route matches "/student/new" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2009-04-03 13:39:58) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 19ms (View: 0, DB: 2) | 401 Unauthorized [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2009-04-03 13:40:01) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 20ms (View: 0, DB: 2) | 401 Unauthorized [http://localhost/students/new]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2009-04-03 13:42:36) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+Rendering template within layouts/students
+Rendering students/new
+Completed in 96ms (View: 71, DB: 2) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2009-04-03 13:50:14) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+Rendering template within layouts/students
+Rendering students/new
+Completed in 33ms (View: 9, DB: 2) | 200 OK [http://localhost/students/new]
+  [4;35;1mUser Load (5.0ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 ) [0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 7 ) [0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 8 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 9 ) [0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 10 ) [0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 11 ) [0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 12 ) [0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 13 ) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 14 ) [0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 15 ) [0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 16 ) [0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 17 ) [0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 18 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 19 ) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 20 ) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 22 ) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 23 ) [0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 24 ) [0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 25 ) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 26 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 27 ) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 28 ) [0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 29 ) [0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 30 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 31 ) [0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 32 ) [0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 33 ) [0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 34 ) [0m
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2009-04-03 13:51:32) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"asdfqwer", "password"=>"asdfqwer", "login"=>"asdfoiu", "email"=>"asdfoiu@aaoiu.org"}, "commit"=>"Sign up", "authenticity_token"=>"15179a971480e1daaf3d415b091a78eb34fa445a", "student"=>{"client_id"=>"33"}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'asdfoiu') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'asdfoiu@aaoiu.org') LIMIT 1[0m
+Rendering template within layouts/students
+Rendering students/new
+Completed in 36ms (View: 7, DB: 2) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2009-04-03 13:51:47) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"asdfqwer", "password"=>"asdfqwer", "login"=>"asdfoiuasdf", "email"=>"asdfoiu@aaoiu.org"}, "commit"=>"Sign up", "authenticity_token"=>"15179a971480e1daaf3d415b091a78eb34fa445a", "student"=>{"client_id"=>"33"}}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'asdfoiuasdf') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'asdfoiu@aaoiu.org') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('', '221c66bb2205f00d700c9b1552c0f01dcb68e8ae', '2009-04-03 17:51:47', '879351cc603827fac5c57f94b2601a247b79d130', NULL, NULL, 'asdfoiuasdf', 'asdfoiu@aaoiu.org', '2009-04-03 17:51:47')[0m
+
+
+NameError (undefined local variable or method `param' for #<StudentsController:0x2242460>):
+    /app/controllers/students_controller.rb:65:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (36.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.6ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2009-04-03 13:52:09) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"asdfqwer", "password"=>"asdfqwer", "login"=>"asdfoiuasdf", "email"=>"asdfoiu@aaoiu.org"}, "commit"=>"Sign up", "authenticity_token"=>"15179a971480e1daaf3d415b091a78eb34fa445a", "student"=>{"client_id"=>"33"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'asdfoiuasdf') LIMIT 1[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'asdfoiu@aaoiu.org') LIMIT 1[0m
+Rendering template within layouts/students
+Rendering students/new
+Completed in 37ms (View: 7, DB: 2) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2009-04-03 13:52:19) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"asdfqwer", "password"=>"asdfqwer", "login"=>"asdfoiuasdfasdf", "email"=>"asdfasdfoiu@aaoiu.org"}, "commit"=>"Sign up", "authenticity_token"=>"15179a971480e1daaf3d415b091a78eb34fa445a", "student"=>{"client_id"=>"33"}}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'asdfoiuasdfasdf') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'asdfasdfoiu@aaoiu.org') LIMIT 1[0m
+  [4;36;1mUser Create (0.9ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('', '93b64e3a5b32beb69b5372a7c2ce9b3011c1cad2', '2009-04-03 17:52:19', 'fccbe85d201c943140db1449bcc7688b61a13084', NULL, NULL, 'asdfoiuasdfasdf', 'asdfasdfoiu@aaoiu.org', '2009-04-03 17:52:19')[0m
+  [4;35;1mClient Load (0.5ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."user_id" = '33') LIMIT 1[0m
+  [4;36;1mStudent Create (0.6ms)[0m   [0;1mINSERT INTO "students" ("updated_at", "client_id", "user_id", "created_at") VALUES('2009-04-03 17:52:19', 19, 36, '2009-04-03 17:52:19')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "roles_users" ("role_id", "user_id") VALUES (3, 36)[0m
+  [4;36;1mWorkflowTaskType Load (0.4ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+
+
+NameError (uninitialized constant WorkflowTaskType::OnsiteInterviewId):
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:102:in `const_missing'
+    /app/controllers/students_controller.rb:85:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (35.6ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.6ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2009-04-03 13:52:42) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"asdfqwer", "password"=>"asdfqwer", "login"=>"asdfoiuasdfasdf", "email"=>"asdfasdfoiu@aaoiu.org"}, "commit"=>"Sign up", "authenticity_token"=>"15179a971480e1daaf3d415b091a78eb34fa445a", "student"=>{"client_id"=>"33"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'asdfoiuasdfasdf') LIMIT 1[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'asdfasdfoiu@aaoiu.org') LIMIT 1[0m
+Rendering template within layouts/students
+Rendering students/new
+Completed in 37ms (View: 7, DB: 3) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2009-04-03 13:52:51) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"asdfqwer", "password"=>"asdfqwer", "login"=>"asdfoiuasdfasdfasdf", "email"=>"asdasdffasdfoiu@aaoiu.org"}, "commit"=>"Sign up", "authenticity_token"=>"15179a971480e1daaf3d415b091a78eb34fa445a", "student"=>{"client_id"=>"33"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 21 ) [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'asdfoiuasdfasdfasdf') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'asdasdffasdfoiu@aaoiu.org') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('', '1bf7f248b5cdec2e8020eb0124d19de7f838d8b2', '2009-04-03 17:52:51', 'aa532ef084210f7abf186cd9cdf259f88e93ec7b', NULL, NULL, 'asdfoiuasdfasdfasdf', 'asdasdffasdfoiu@aaoiu.org', '2009-04-03 17:52:51')[0m
+  [4;35;1mClient Load (0.5ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."user_id" = '33') LIMIT 1[0m
+  [4;36;1mStudent Create (0.6ms)[0m   [0;1mINSERT INTO "students" ("updated_at", "client_id", "user_id", "created_at") VALUES('2009-04-03 17:52:51', 19, 37, '2009-04-03 17:52:51')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "roles_users" ("role_id", "user_id") VALUES (3, 37)[0m
+  [4;36;1mWorkflowTaskType Load (0.4ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+  [4;35;1mWorkflowTask Create (0.5ms)[0m   [0mINSERT INTO "workflow_tasks" ("updated_at", "target_id", "workflow_task_type_id", "owner_id", "created_at") VALUES('2009-04-03 17:52:51', 37, 2, 21, '2009-04-03 17:52:51')[0m
+Redirected to /
+Completed in 69ms (DB: 6) | 302 Found [http://localhost/students]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 13:52:51) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 37) LIMIT 1[0m
+  [4;35;1mWorkflowTask Load (0.2ms)[0m   [0mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 37) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered misc/_top_bar_logged_in (0.8ms)
+Completed in 27ms (View: 9, DB: 1) | 200 OK [http://localhost/]

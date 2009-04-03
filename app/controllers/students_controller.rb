@@ -1,5 +1,6 @@
 class StudentsController < ApplicationController
 
+  require_role ["admin","client"]
 
   # GET /students
   # GET /students.xml
@@ -27,6 +28,7 @@ class StudentsController < ApplicationController
   # GET /students/new.xml
   def new
     @student = Student.new
+    @user = User.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,18 +44,51 @@ class StudentsController < ApplicationController
   # POST /students
   # POST /students.xml
   def create
-    @student = Student.new(params[:student])
 
-    respond_to do |format|
-      if @student.save
-        flash[:notice] = 'Student was successfully created.'
-        format.html { redirect_to(@student) }
-        format.xml  { render :xml => @student, :status => :created, :location => @student }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @student.errors, :status => :unprocessable_entity }
-      end
+    @user = User.new(params[:user])
+    success = @user && @user.save
+    if (! success) || (! @user.errors.empty?)
+      flash[:error] = "We were unable to set up that account"
+      render :action => 'new'
+      return
     end
+
+
+    # a client creates a child student, an admin
+    # specifies one
+    
+    if( current_user.has_role? 'client' )
+      @client = Client.find_by_user_id(current_user.id)
+    end
+
+    if( current_user.has_role? 'admin' )
+      @client = Client.find_by_user_id(params[:student][:client_id])
+    end
+
+
+    @student = Student.new()
+    @student.user_id = @user.id
+    @student.client_id = @client.id
+
+    success = @student && @student.save
+
+    @user.roles << Role::Student
+
+    if (! success) || (! @student.errors.empty?)
+      @user.delete
+      flash[:error] = "We were unable to set up that account"
+      render :action => 'new'
+      return
+    end
+
+    task = WorkflowTask.new
+    task.workflow_task_type_id = WorkflowTaskType::OnSiteInterviewId
+    task.owner = User.find_by_login('admin')
+    task.target_id = @user.id
+    task.save()
+    
+    redirect_back_or_default('/')
+
   end
 
   # PUT /students/1

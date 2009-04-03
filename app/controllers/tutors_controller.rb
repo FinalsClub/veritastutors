@@ -1,6 +1,6 @@
 class TutorsController < ApplicationController
 
-#  require_role "admin", :for_all_except => :home
+  require_role "admin", :for_all_except => :home
   require_role "tutor", :for => :home
 
   
@@ -68,6 +68,8 @@ class TutorsController < ApplicationController
         @user.delete
       end
     end
+
+    @user.roles << Role::Tutor
   
     respond_to do |format|
       if success
