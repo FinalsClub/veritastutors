@@ -84,4 +84,18 @@ class AppointmentRequestsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+
+
+  # accept an appointment request
+  def accept
+
+  end
+
+
+  def decline
+
+  end
+
+
 end

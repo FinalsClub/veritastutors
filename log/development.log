@@ -15348,3 +15348,477 @@ Rendering template within layouts/application
 Rendering misc/homepage
 Rendered misc/_top_bar_logged_in (0.8ms)
 Completed in 27ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to ConvertRoleIds (20090331000300)
+Migrating to AddAdminUser (20090331153904)
+Migrating to AddDummyUsers (20090331155330)
+Migrating to UpdateWorkflowTaskTypes (20090331164926)
+Migrating to InitialTaskTypes (20090331183910)
+Migrating to AddAppointmentTaskTypes (20090403203603)
+  [4;36;1mWorkflowTaskType Load (0.4ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.1ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 3) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.1ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 4) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Create (0.6ms)[0m   [0;1mINSERT INTO "workflow_task_types" ("name", "updated_at", "partial", "id", "created_at") VALUES('Appointment Request', '2009-04-03 20:43:07', 'appointment_requests/request_task', 3, '2009-04-03 20:43:07')[0m
+  [4;35;1mWorkflowTaskType Create (0.4ms)[0m   [0mINSERT INTO "workflow_task_types" ("name", "updated_at", "partial", "id", "created_at") VALUES('Appointment Acknowledgement', '2009-04-03 20:43:07', 'appointment_requests/acknowledge_task', 4, '2009-04-03 20:43:07')[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090403203603')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("appointment_requests")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_clients_on_user_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("roles")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("roles_users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_roles_users_on_user_id')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_roles_users_on_role_id')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mPRAGMA index_list("students")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_students_on_client_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_students_on_user_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("tutors")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("workflow_task_types")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("workflow_tasks")[0m
+  [4;35;1mSQL (1.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 17:45:46) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 37) LIMIT 1[0m
+  [4;35;1mWorkflowTask Load (0.2ms)[0m   [0mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 37) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered misc/_top_bar_logged_in (0.6ms)
+Completed in 26ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-04-03 17:45:50) [GET]
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 17:45:50) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (0.8ms)
+Rendered misc/_top_bar_logged_out (2.5ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2009-04-03 17:46:06) [GET]
+Rendering template within layouts/clients
+Rendering clients/new
+Completed in 106ms (View: 9, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2009-04-03 17:48:36) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"asdfqwer", "password"=>"asdfqwer", "login"=>"jashdlfkjhlk", "email"=>"alksjdhfk!ka@skjdhfkajshd.org"}, "commit"=>"Sign up", "authenticity_token"=>"7b14d65424cb41c77e51946931a4f3ee8aef5ed7", "client"=>{"is_student"=>"true"}}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'jashdlfkjhlk') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'alksjdhfk!ka@skjdhfkajshd.org') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Completed in 26ms (View: 6, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2009-04-03 17:48:50) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"asdfqwer", "password"=>"asdfqwer", "login"=>"jashdlfkjhlk", "email"=>"alksfk!ka@skjdhfhd.org"}, "commit"=>"Sign up", "authenticity_token"=>"7b14d65424cb41c77e51946931a4f3ee8aef5ed7", "client"=>{"is_student"=>"true"}}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'jashdlfkjhlk') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'alksfk!ka@skjdhfhd.org') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Completed in 25ms (View: 6, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2009-04-03 17:49:06) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"asdfqwer", "password"=>"asdfqwer", "login"=>"jashdlfkjhlk", "email"=>"alksfkka@skjdhfhd.org"}, "commit"=>"Sign up", "authenticity_token"=>"7b14d65424cb41c77e51946931a4f3ee8aef5ed7", "client"=>{"is_student"=>"true"}}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'jashdlfkjhlk') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'alksfkka@skjdhfhd.org') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('', 'd6748c9252ed63a886f24883e3ca12527a9f2c8f', '2009-04-03 21:49:06', '58e3be90e265bea97a5f542c3e82d6723551186a', NULL, NULL, 'jashdlfkjhlk', 'alksfkka@skjdhfhd.org', '2009-04-03 21:49:06')[0m
+  [4;35;1mClient Create (0.6ms)[0m   [0mINSERT INTO "clients" ("name", "updated_at", "user_id", "is_student", "created_at") VALUES(NULL, '2009-04-03 21:49:06', 38, 't', '2009-04-03 21:49:06')[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 3) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "roles_users" ("role_id", "user_id") VALUES (2, 38)[0m
+  [4;35;1mStudent Create (0.6ms)[0m   [0mINSERT INTO "students" ("updated_at", "client_id", "user_id", "created_at") VALUES('2009-04-03 21:49:06', 21, 38, '2009-04-03 21:49:06')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "roles_users" ("role_id", "user_id") VALUES (3, 38)[0m
+  [4;35;1mWorkflowTaskType Load (0.4ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 3) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 4) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+  [4;36;1mWorkflowTask Create (0.4ms)[0m   [0;1mINSERT INTO "workflow_tasks" ("updated_at", "target_id", "workflow_task_type_id", "owner_id", "created_at") VALUES('2009-04-03 21:49:06', 38, 1, 21, '2009-04-03 21:49:06')[0m
+Redirected to /
+Completed in 83ms (DB: 6) | 302 Found [http://localhost/clients]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 17:49:07) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 38) LIMIT 1[0m
+  [4;36;1mWorkflowTask Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 38) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered misc/_top_bar_logged_in (0.6ms)
+Completed in 27ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-04-03 17:51:26) [GET]
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 17:51:26) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (0.8ms)
+Rendered misc/_top_bar_logged_out (2.5ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-04-03 17:51:34) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"2be947a909457b13f4d978f1affe51f17feeedc0", "login"=>"admin", "password"=>"donkeybutter"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to /
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/session]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 17:51:34) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;35;1mWorkflowTask Load (1.0ms)[0m   [0mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 21) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+  [4;36;1mWorkflowTaskType Load (0.4ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 3) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 4) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 33) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (2.8ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 34) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (1.3ms)
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 37) LIMIT 1[0m
+Rendered simple_workflow_tasks/_on_site_interview (2.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 38) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (2.2ms)
+Rendered misc/_top_bar_logged_in (0.8ms)
+Completed in 76ms (View: 54, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SimpleWorkflowTasksController#complete_phone_consultation (for 127.0.0.1 at 2009-04-03 17:51:48) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mWorkflowTask Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."id" = 6) [0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 3) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.4ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 4) LIMIT 1[0m
+  [4;35;1mWorkflowTask Create (0.5ms)[0m   [0mINSERT INTO "workflow_tasks" ("updated_at", "target_id", "workflow_task_type_id", "owner_id", "created_at") VALUES('2009-04-03 21:51:48', 38, 2, 21, '2009-04-03 21:51:48')[0m
+  [4;36;1mWorkflowTask Delete all (5.1ms)[0m   [0;1mDELETE FROM "workflow_tasks" WHERE ("id" IN (6)) [0m
+Redirected to /
+Completed in 27ms (DB: 7) | 302 Found [http://localhost/simple_workflow_tasks/complete_phone_consultation/6]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 17:51:48) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;36;1mWorkflowTask Load (0.7ms)[0m   [0;1mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 21) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+  [4;35;1mWorkflowTaskType Load (0.6ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.5ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (1.0ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 3) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.5ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 4) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.4ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 33) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (3.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 34) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (1.8ms)
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 37) LIMIT 1[0m
+Rendered simple_workflow_tasks/_on_site_interview (1.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 38) LIMIT 1[0m
+Rendered simple_workflow_tasks/_on_site_interview (1.5ms)
+Rendered misc/_top_bar_logged_in (0.7ms)
+Completed in 51ms (View: 33, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SimpleWorkflowTasksController#complete_on_site_interview (for 127.0.0.1 at 2009-04-03 17:52:42) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mWorkflowTask Load (0.3ms)[0m   [0mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."id" = 7) [0m
+  [4;36;1mWorkflowTask Delete all (3.6ms)[0m   [0;1mDELETE FROM "workflow_tasks" WHERE ("id" IN (7)) [0m
+Redirected to /
+Completed in 12ms (DB: 4) | 302 Found [http://localhost/simple_workflow_tasks/complete_on_site_interview/7]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-03 17:52:42) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;36;1mWorkflowTask Load (0.6ms)[0m   [0;1mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 21) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+  [4;35;1mWorkflowTaskType Load (0.4ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 3) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 4) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 33) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (2.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 34) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (1.2ms)
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 37) LIMIT 1[0m
+Rendered simple_workflow_tasks/_on_site_interview (1.4ms)
+Rendered misc/_top_bar_logged_in (0.5ms)
+Completed in 44ms (View: 24, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-05 22:47:23) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;36;1mWorkflowTask Load (0.9ms)[0m   [0;1mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 21) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+  [4;35;1mWorkflowTaskType Load (0.6ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.4ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 3) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 4) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.4ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 33) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (3.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 34) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (1.4ms)
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) [0m
+  [4;36;1mUser Load (17.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 37) LIMIT 1[0m
+Rendered simple_workflow_tasks/_on_site_interview (19.1ms)
+Rendered misc/_top_bar_logged_in (0.9ms)
+Completed in 341ms (View: 226, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-07 14:07:17) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 21) LIMIT 1[0m
+  [4;35;1mWorkflowTask Load (1.0ms)[0m   [0mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 21) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+  [4;36;1mWorkflowTaskType Load (0.6ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 3) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 4) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 33) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (3.3ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 34) LIMIT 1[0m
+Rendered simple_workflow_tasks/_phone_consultation (1.4ms)
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 37) LIMIT 1[0m
+Rendered simple_workflow_tasks/_on_site_interview (1.8ms)
+Rendered misc/_top_bar_logged_in (1.4ms)
+Completed in 141ms (View: 99, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-04-07 14:07:20) [GET]
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 91ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-07 14:07:21) [GET]
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered sessions/_embedded_login (1.0ms)
+Rendered misc/_top_bar_logged_out (2.7ms)
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2009-04-07 14:07:23) [GET]
+Rendering template within layouts/clients
+Rendering clients/new
+Completed in 38ms (View: 14, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2009-04-07 14:07:38) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"asdfqwer", "password"=>"asdfqwer", "login"=>"asdiuwelkofiu", "email"=>"lkadofiyoajnr@laksjdf.org"}, "commit"=>"Sign up", "authenticity_token"=>"38a491f8fb50aabb28d442042509f38bc57daf6e", "client"=>{"is_student"=>"true"}}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'asdiuwelkofiu') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'lkadofiyoajnr@laksjdf.org') LIMIT 1[0m
+  [4;36;1mUser Create (0.6ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('', 'b79739158b2572af81ab1492bb09c34b20e1b8ad', '2009-04-07 18:07:38', '95ffd2adde808f30a088723d1fd993f23f14cb1d', NULL, NULL, 'asdiuwelkofiu', 'lkadofiyoajnr@laksjdf.org', '2009-04-07 18:07:38')[0m
+  [4;35;1mClient Create (0.7ms)[0m   [0mINSERT INTO "clients" ("name", "updated_at", "user_id", "is_student", "created_at") VALUES(NULL, '2009-04-07 18:07:39', 39, 't', '2009-04-07 18:07:39')[0m
+  [4;36;1mRole Load (0.8ms)[0m   [0;1mSELECT * FROM "roles" [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "roles_users" ("role_id", "user_id") VALUES (2, 39)[0m
+  [4;36;1mStudent Create (1.0ms)[0m   [0;1mINSERT INTO "students" ("updated_at", "client_id", "user_id", "created_at") VALUES('2009-04-07 18:07:39', 22, 39, '2009-04-07 18:07:39')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "roles_users" ("role_id", "user_id") VALUES (3, 39)[0m
+  [4;36;1mWorkflowTaskType Load (0.5ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 1) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 2) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 3) LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Load (0.3ms)[0m   [0mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."id" = 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+  [4;35;1mWorkflowTask Create (0.5ms)[0m   [0mINSERT INTO "workflow_tasks" ("updated_at", "target_id", "workflow_task_type_id", "owner_id", "created_at") VALUES('2009-04-07 18:07:39', 39, 1, 21, '2009-04-07 18:07:39')[0m
+Redirected to /
+Completed in 88ms (DB: 7) | 302 Found [http://localhost/clients]
+
+
+Processing MiscController#homepage (for 127.0.0.1 at 2009-04-07 14:07:39) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 39) LIMIT 1[0m
+  [4;35;1mWorkflowTask Load (0.2ms)[0m   [0mSELECT * FROM "workflow_tasks" WHERE ("workflow_tasks"."owner_id" = 39) [0m
+Rendering template within layouts/application
+Rendering misc/homepage
+Rendered misc/_top_bar_logged_in (0.6ms)
+Completed in 26ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 39) LIMIT 1[0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 39 ) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT * FROM "roles" [0m
+  [4;35;1mWorkflowTaskType Load (0.8ms)[0m   [0mSELECT * FROM "workflow_task_types" [0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to AddAdminUser (20090331153904)
+Migrating to AddDummyUsers (20090331155330)
+Migrating to UpdateWorkflowTaskTypes (20090331164926)
+Migrating to InitialTaskTypes (20090331183910)
+Migrating to AddAppointmentTaskTypes (20090403203603)
+Migrating to UpdateWorkflowTaskTypeNames (20090407181729)
+  [4;36;1mWorkflowTaskType Load (0.7ms)[0m   [0;1mSELECT * FROM "workflow_task_types" [0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to AddAdminUser (20090331153904)
+Migrating to AddDummyUsers (20090331155330)
+Migrating to UpdateWorkflowTaskTypes (20090331164926)
+Migrating to InitialTaskTypes (20090331183910)
+Migrating to AddAppointmentTaskTypes (20090403203603)
+Migrating to UpdateWorkflowTaskTypeNames (20090407181729)
+  [4;36;1mWorkflowTaskType Load (0.4ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'Initial Phone Consultation') LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Exists (0.2ms)[0m   [0mSELECT "workflow_task_types".id FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'initial_consultation' AND "workflow_task_types".id <> 1) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'Initial Onsite Interview') LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Exists (0.1ms)[0m   [0mSELECT "workflow_task_types".id FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'initial_interview' AND "workflow_task_types".id <> 2) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'Appointment Request') LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Exists (0.1ms)[0m   [0mSELECT "workflow_task_types".id FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'appointment_request' AND "workflow_task_types".id <> 3) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.1ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'Appointment Acknowlegement') LIMIT 1[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090316173858)
+Migrating to CreateRoles (20090316175226)
+Migrating to AddVtRoles (20090316182110)
+Migrating to CreateStudents (20090319170121)
+Migrating to CreateClients (20090319172642)
+Migrating to CreateTutors (20090325193619)
+Migrating to CreateAppointmentRequests (20090327195226)
+Migrating to CreateWorkflowTaskTypes (20090330230355)
+Migrating to CreateWorkflowTasks (20090330231319)
+Migrating to AddAdminUser (20090331153904)
+Migrating to AddDummyUsers (20090331155330)
+Migrating to UpdateWorkflowTaskTypes (20090331164926)
+Migrating to InitialTaskTypes (20090331183910)
+Migrating to AddAppointmentTaskTypes (20090403203603)
+Migrating to UpdateWorkflowTaskTypeNames (20090407181729)
+  [4;36;1mWorkflowTaskType Load (0.4ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'Initial Phone Consultation') LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Exists (0.2ms)[0m   [0mSELECT "workflow_task_types".id FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'initial_consultation' AND "workflow_task_types".id <> 1) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'Initial Onsite Interview') LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Exists (0.1ms)[0m   [0mSELECT "workflow_task_types".id FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'initial_interview' AND "workflow_task_types".id <> 2) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.3ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'Appointment Request') LIMIT 1[0m
+  [4;35;1mWorkflowTaskType Exists (0.1ms)[0m   [0mSELECT "workflow_task_types".id FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'appointment_request' AND "workflow_task_types".id <> 3) LIMIT 1[0m
+  [4;36;1mWorkflowTaskType Load (0.1ms)[0m   [0;1mSELECT * FROM "workflow_task_types" WHERE ("workflow_task_types"."name" = 'Appointment Acknowlegement') LIMIT 1[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090407181729')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("appointment_requests")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("clients")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_clients_on_user_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("roles_users")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_roles_users_on_user_id')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_roles_users_on_role_id')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mPRAGMA index_list("students")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_info('index_students_on_client_id')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_students_on_user_id')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("tutors")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_users_on_login')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("workflow_task_types")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("workflow_tasks")[0m

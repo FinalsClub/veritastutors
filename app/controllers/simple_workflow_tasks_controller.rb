@@ -4,7 +4,7 @@ class SimpleWorkflowTasksController < ApplicationController
     @task = WorkflowTask.find(params[:id])
     
     @newTask = @task.create_successor_task
-    @newTask.workflow_task_type_id = WorkflowTaskType::OnSiteInterviewId
+    @newTask.workflow_task_type_id = WorkflowTaskType[:initial_interview]
     @newTask.save
 
     @task.delete

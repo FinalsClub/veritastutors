@@ -82,7 +82,7 @@ class StudentsController < ApplicationController
     end
 
     task = WorkflowTask.new
-    task.workflow_task_type_id = WorkflowTaskType::OnSiteInterviewId
+    task.workflow_task_type_id = WorkflowTaskType[:initial_interview]
     task.owner = User.find_by_login('admin')
     task.target_id = @user.id
     task.save()
