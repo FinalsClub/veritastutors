@@ -72,7 +72,7 @@ class StudentsController < ApplicationController
 
     success = @student && @student.save
 
-    @user.roles << Role::Student
+    @user.roles << Role[:student]
 
     if (! success) || (! @student.errors.empty?)
       @user.delete

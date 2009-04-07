@@ -69,7 +69,7 @@ class TutorsController < ApplicationController
       end
     end
 
-    @user.roles << Role::Tutor
+    @user.roles << Role[:tutor]
   
     respond_to do |format|
       if success

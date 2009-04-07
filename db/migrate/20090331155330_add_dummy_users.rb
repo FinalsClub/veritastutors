@@ -2,7 +2,7 @@ class AddDummyUsers < ActiveRecord::Migration
   def self.up
 
     u = User.new( { :login => 'tutor1', :email => 'tutor_one@bar.org', :password => 'donkeybutter', :password_confirmation => 'donkeybutter' } )
-    u.roles = [Role::Tutor]
+    u.roles << Role[:tutor]
     u.save
 
     t = Tutor.new
@@ -10,7 +10,7 @@ class AddDummyUsers < ActiveRecord::Migration
     t.save
 
     u = User.new( { :login => 'tutor2', :email => 'tutor_two@bar.org', :password => 'donkeybutter', :password_confirmation => 'donkeybutter' } )
-    u.roles = [Role::Tutor]
+    u.roles << Role[:tutor]
     u.save
 
     t = Tutor.new

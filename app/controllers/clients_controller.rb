@@ -63,7 +63,7 @@ class ClientsController < ApplicationController
       return
     end
 
-    @user.roles << Role::Client
+    @user.roles << Role[:client]
 
     if(@client.is_student)
       @student = Student.new()
@@ -71,7 +71,7 @@ class ClientsController < ApplicationController
       @student.client_id = @client.id
 
       success = @student && @student.save
-      @user.roles << Role::Student
+      @user.roles << Role[:student]
     end
 
 
